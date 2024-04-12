@@ -5,9 +5,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* This ensures the body takes up the full height of the viewport */
-    margin: 0; /* Remove default margin */
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent horizontal scrolling */
 }
+
 body::before {
     content: "";
     background-image: url("background4.png");
@@ -18,77 +21,85 @@ body::before {
     right: 0;
     bottom: 0;
     z-index: -1;
-    filter: blur(10px); /* Adjust the blur radius as needed */
+    filter: blur(10px);
 }
 
-.app{
+.app {
     width: 25vh;
     border-radius: 50px;
+    text-align: center;
+    margin: auto;
 }
 
-.download,.more{
-width: 30vh;
-height: 10vh;
-border-radius: 200px;
-text-align: center;
-margin: auto;
-padding: 1px;
+.download, .more {
+    width: 30vh;
+    height: 10vh;
+    border-radius: 200px;
+    text-align: center;
+    margin: 20px auto;
+    padding: 1px;
 }
 
-.download{
-    color: whitesmoke;
-background-image: url("./imgs/download.jpg");
-font-weight: bolder;
-
+.download {
+    color: white;
+    background-image: url("./imgs/download.jpg");
+    font-weight: bolder;
 }
 
-.more{
-    color: whitesmoke;
+.more {
+    color: white;
     background-image: url("./imgs/more.jpg");
     font-weight: bold;
     color: black;
-
-
 }
 
-.download:hover{
-background-image: url("./imgs/download_hover.jpg");
-cursor: pointer;
-
+.download:hover {
+    background-image: url("./imgs/download_hover.jpg");
+    cursor: pointer;
 }
 
-.more:hover{
+.more:hover {
     background-image: url("./imgs/more_hover.jpg");
     cursor: pointer;
-
-}
-
-.container ,.container2{
-    width: 50%; /* Set the width of the container */
-    text-align: center; /* Center the content inside the container */
-    padding: 20px; /* Just for demonstration */
 }
 
 .container {
-    position: relative; /* Ensure z-index works */
-    z-index: 1; /* Set a higher value to be on top of .container2 */
+    position: relative;
+    z-index: 1; /* Ensure container is above container2 */
+    width: 80%; /* Adjust width as needed */
+    max-width: 800px; /* Limit maximum width for larger screens */
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Adjust opacity as needed */
+    border-radius: 20px;
 }
 
-.container2 {
-    position: absolute;
-    background-color: whitesmoke;
-    width: 70vh;
-    height: 36vh;
-    filter: opacity(30%);
-    border-radius: 20px;
-    z-index: 0; /* Set a lower value to be behind .container */
-}
 
 @font-face {
     font-family: myFirstFont;
     src: url("./font/Jost-700-Bold.ttf");
-  }
-  
-  div {
+}
+
+div {
     font-family: myFirstFont;
-  }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .container{
+        width: 100%; /* Adjust width as needed */
+        max-width: 80vh; /* Limit maximum width for larger screens */
+    }
+    .app{
+        width: 20vh;
+    }
+
+    .download, .more {
+        width: 25vh;
+        height: 10vh;
+        border-radius: 100px;
+        font-size: 1.8vh;
+    }
+
+}
