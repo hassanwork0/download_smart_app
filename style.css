@@ -67,7 +67,7 @@ body::before {
     position: relative;
     z-index: 1; /* Ensure container is above container2 */
     width: 80%; /* Adjust width as needed */
-    max-width: 800px; /* Limit maximum width for larger screens */
+    max-width: 80vh; /* Limit maximum width for larger screens */
     text-align: center;
     margin: 20px auto;
     padding: 20px;
