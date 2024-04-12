@@ -38,6 +38,7 @@ body::before {
     text-align: center;
     margin: 20px auto;
     padding: 1px;
+    font-size: 1.8vh;
 }
 
 .download {
