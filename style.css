@@ -1,0 +1,94 @@
+body {
+    background-color: black;
+    color: black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* This ensures the body takes up the full height of the viewport */
+    margin: 0; /* Remove default margin */
+}
+body::before {
+    content: "";
+    background-image: url("background4.png");
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: blur(10px); /* Adjust the blur radius as needed */
+}
+
+.app{
+    width: 25vh;
+    border-radius: 50px;
+}
+
+.download,.more{
+width: 30vh;
+height: 10vh;
+border-radius: 200px;
+text-align: center;
+margin: auto;
+padding: 1px;
+}
+
+.download{
+    color: whitesmoke;
+background-image: url("./imgs/download.jpg");
+font-weight: bolder;
+
+}
+
+.more{
+    color: whitesmoke;
+    background-image: url("./imgs/more.jpg");
+    font-weight: bold;
+    color: black;
+
+
+}
+
+.download:hover{
+background-image: url("./imgs/download_hover.jpg");
+cursor: pointer;
+
+}
+
+.more:hover{
+    background-image: url("./imgs/more_hover.jpg");
+    cursor: pointer;
+
+}
+
+.container ,.container2{
+    width: 50%; /* Set the width of the container */
+    text-align: center; /* Center the content inside the container */
+    padding: 20px; /* Just for demonstration */
+}
+
+.container {
+    position: relative; /* Ensure z-index works */
+    z-index: 1; /* Set a higher value to be on top of .container2 */
+}
+
+.container2 {
+    position: absolute;
+    background-color: whitesmoke;
+    width: 70vh;
+    height: 36vh;
+    filter: opacity(30%);
+    border-radius: 20px;
+    z-index: 0; /* Set a lower value to be behind .container */
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url("./font/Jost-700-Bold.ttf");
+  }
+  
+  div {
+    font-family: myFirstFont;
+  }
