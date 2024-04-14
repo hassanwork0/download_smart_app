@@ -1,39 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download page</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container2"></div>
     <div class="container">
         <table>
             <thead>
-                <td>
-                    <img src="Screenshot_1612.png" class="app"/>
-                </td>
-                <td>
-                    <h1>SMART COURSE - APP</h1>
-                    <p>this app made from students to the students<s/p>
-                </td>
+                <tr>
+                    <th>
+                        <img src="logo.png" class="app" />
+                    </th>
+                    <th>
+                        <h1>SMART COURSE - APP</h1>
+                        <p>this app made from students to the students</p>
+                    </th>
+                </tr>
             </thead>
             <tbody>
-                    <tr>
+                <tr>
                     <td>
-                    <div class="download">
-                        <h1>Download</h1>
-                    </div>
-                </td>
-                <td>
-                    <div class="more">
-                        <h1>More Info</h1>
-                    </div>
-                </td>
+                        <a>
+                            <div class="download">
+                                <h1>Download</h1>
+                            </div>
+                        </a>
+                    </td>
+                    <td>
+                        <a onclick="openMore()">
+                            <div class="more">
+                                <h1>More Info</h1>
+                            </div>
+                        </a>
+                    </td>
                 </tr>
             </tbody>
         </table>
+
+        <div class="popup">
+            <img src="logo.png" alt="logo" class="pop_img">
+            <h1 class="pop_title">
+                This Courses App Made From Smart Team IT Department
+            </h1>
+            <p class="pop_text">
+                We made this app for navigationg our shared courses for every hti departments
+                such as
+            </p>
+            <ul>
+                <li>Engineering</li>
+                <li>Computer Science</li>
+                <li>Mangment</li>
+            </ul>
+            <a onclick="closeMore()">
+                <div class="more">
+                    <h1>OK</h1>
+                </div>
+            </a>
+        </div>
+
     </div>
+    <script>
+let popup = document.querySelector(".popup");
+
+function openMore(){
+    popup.classList.add("open-popup");
+}
+
+function closeMore(){
+    popup.classList.remove("open-popup");
+}
+
+
+    </script>
 </body>
 </html>
