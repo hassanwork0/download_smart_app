@@ -108,6 +108,7 @@ div {
     left: 50%;
     transform: translate(-50%,-50%) scale(0);
     transition: transform 0.4s;
+    visibility: hidden;
 }
 
 .pop_img{
@@ -119,6 +120,12 @@ div {
 
 .open-popup{
     transform: translate(-50%,-50%) scale(1);
+    visibility: visible;
+}
+
+.close-popup{
+    transform: translate(-50%,-50%) scale(0);
+    visibility: visible;
 }
 
 

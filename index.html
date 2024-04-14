@@ -70,9 +70,11 @@ let popup = document.querySelector(".popup");
 
 function openMore(){
     popup.classList.add("open-popup");
+    popup.classList.remove("close-popup");
 }
 
 function closeMore(){
+    popup.classList.add("close-popup");
     popup.classList.remove("open-popup");
 }
 
